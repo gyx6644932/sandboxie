@@ -1,0 +1,114 @@
+.rotationT90{
+     transform:rotate(90deg);/* Rotate div */
+     -ms-transform:rotate(90deg); /* Internet Explorer */
+     -moz-transform:rotate(90deg); /* Firefox */
+     -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+     -o-transform:rotate(90deg); /* Opera */   
+}
+
+.rotation180{
+     transform:rotate(180deg); /* Rotate div */
+     -ms-transform:rotate(180deg); /* Internet Explorer */
+     -moz-transform:rotate(180deg); /* Firefox */
+     -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+     -o-transform:rotate(180deg); /* Opera */ 
+     
+ }
+ 
+ .rotationT-90{
+     transform:rotate(-90deg);/* Rotate div */
+     -ms-transform:rotate(-90deg); /* Internet Explorer */
+     -moz-transform:rotate(-90deg); /* Firefox */
+     -webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+     -o-transform:rotate(-90deg); /* Opera */   
+}
+
+.header{ 
+	width:100%;
+	postion:relative;
+	z-index:100;
+}
+
+
+
+
+.wrap{
+	width:98%;
+	margin:auto;
+}
+
+body button{
+	margin:20px 2px;
+}
+
+.contentChil{
+	width:35%;
+	float:left;
+	padding-top:10px;
+}
+
+.contentChild2{
+	width:30%;
+	float:left;
+	height:100%;
+}
+
+.roleBtn{
+	height:65px;
+	width:100px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	margin:0px !important;
+}
+
+#tagsList {
+	position:relative;
+	width:100%;
+	height:250px;
+	margin:auto; 
+}
+
+#tagsList a {
+	position:absolute;
+	top:0px;
+	left:0px; 
+	font-family: Microsoft YaHei;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#tagsList a:hover { 
+	color:#FF0000;
+	 letter-spacing:2px;
+}
+
+#tagsList2 {
+	position:relative;
+	width:100%;
+	height:250px;
+	margin:auto; 
+}
+
+#tagsList2 a {
+	position:absolute;
+	top:0px;
+	left:0px; 
+	font-family: Microsoft YaHei;
+	color:#fff;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#tagsList2 a:hover { 
+	color:#FF0000;
+	 letter-spacing:2px;
+}
+
+.center{
+	width:100%;
+}
+.centerChirl{
+	width:25%;
+}
