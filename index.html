@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/tags.js"></script>
+	<script type="text/javascript" src="js/tagsT.js"></script>
+	<script src="build/dist/echarts.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body style="background-color:#104E8B">
+
+	<div class="rotation180" style="width:80%;postion:relative;z-index:100;margin:auto;">
+		<div style="width:100%;margin:auto;">
+			<div class="TopTable">
+				<table class="table" style="border:none;margin:0px;">
+					<thead>
+						<tr  class="danger">
+							<th>运营时间：第一年（共六年）</th>
+							<th>运营周期：第一年（共四期）</th>
+							<th>总经费：10000K</th>
+							<th>营销经费：1000K</th>
+							<th>运营状态：良好</th>
+							<th>人员数量：80人</th>
+						</tr>
+						<tr  class="danger">
+							<th>业务员：4人</th>
+							<th>客服员：4人</th>
+							<th>渠道数量：4</th>
+							<th>直销部：2</th>
+							<th>分销部：2</th>
+							<th>IOS认证：</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+
+			<div style="width:100%;">
+				<table style="width:100%;">
+					<tr>
+						<td width="35%" style="background-color:#FCF8E3;">
+							<div style="width:100%;">
+								<div style="width:30%;text-align:right;display:inline-block;">
+									<div>
+										<button type="button" class="btn btn-primary btn-sm actionBtn" id="managerISO">ISO认证</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-primary btn-sm actionBtn" id="managerProduction">产品生产审核</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-primary btn-sm actionBtn" id="managerDiscount">订单贴现</button>
+									</div>
+								</div>
+								<div style="width:30%;text-align:center; display: inline-block;">
+									<div>
+										<button type="button" class="btn btn-primary btn-sm">当前开始</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-primary btn-sm roleBtn" style="">总经理</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-primary btn-sm actionBtn" id="managerOther">其他申请</button>
+									</div>
+								</div>
+								<div style="display:inline-block;">
+									<div>
+										<button type="button" class="btn btn-primary btn-sm actionBtn" id="managerFundsApply">营销经费申请审核</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-primary btn-sm actionBtn" id="managerBackFunds">总经理回账申请</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-primary btn-sm actionBtn" id="managerClearance">产品清仓审核</button>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td width="30%">
+							<div  style="background:#BB5500;width:100%;height:100%;display:inline-block;">
+								<div id="tagsList">
+									<a href="" title="分页插件">市场占有能力</a>
+									<a href="" title="时间插件">市场创利能力</a>
+									<a href="" title="弹出层">市场发展能力</a>
+									<a href="" title="数据统计">产品生产</a>
+									<a href="" title="HTML5">销售完成率</a>
+									<a href="" title="置顶特效">销售增长率</a>
+									<a href="" title="选项卡">销售回款率</a>
+								</div>
+							</div>
+						</td>
+						<td style="background-color:#FCF8E3;">
+							<div style="width:100%;" >
+								<div style="width:30%;text-align:right;display:inline-block;">
+									<div>
+										<button type="button" class="btn btn-sm btn-warning actionBtn" id="marketingSurvey">市场调研</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-sm btn-warning actionBtn" id="marketingFunds">营销经费申请</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-warning btn-sm actionBtn" id="marketingTransport">产品运输申请</button>
+									</div>
+								</div>
+								<div style="width:30%;text-align:center; display: inline-block;">
+
+									<div>
+
+										<button type="button" class="btn btn-warning roleBtn btn-sm" style="">营销总监</button>
+
+									</div>
+
+								</div>
+								<div style="display: inline-block;">
+									<div>
+										<button type="button" class="btn btn-warning btn-sm actionBtn" id="marketingRecruitment">人员招聘审核</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-warning btn-sm">营销经费审核</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-warning btn-sm">产品调货申请</button>
+									</div>
+								</div>
+							</div>
+
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div style="width:98%;height:700px;position:relative;z-index:1000;margin:auto;">
+
+		<div class="rotationT90" style="width:50%;position:absolute;top:5%;left:0%;display:inline-block;background-color:#FCF8E3;">
+			<table class="table" style="border:none;margin-bottom:50px;">
+				<thead>
+					<tr class="danger">
+						<th colspan="2">M1市场</th>
+						<th colspan="2">M2市场</th>
+						<th colspan="2">M3市场</th>
+					</tr>
+					<tr class="warning">
+						<th rowspan="8">P1(代销商，经销商)</th>
+						<td colspan="2">分销商等级：普通/高级</td>
+						<th rowspan="8">P2(代销商，经销商)</th>
+						<td colspan="2">分销商等级：普通/高级</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">分销商类型：经销/代销</td>
+						<td colspan="2">分销商类型：经销/代销</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">分销商订单数量：100个</td>
+						<td colspan="2">分销商订单数量：100个</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">分销商订货价格：10K</td>
+						<td colspan="2">分销商订货价格：10K</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">当年交货数量：100个</td>
+						<td colspan="2">当年交货数量：100个</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">是否交货违约：否</td>
+						<td colspan="2">是否交货违约：否</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">最终市场销售价格：12K</td>
+						<td colspan="2">最终市场销售价格：12K</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">销售利润率：12%</td>
+						<td colspan="2">销售利润率：12%</td>
+					</tr>
+
+				</thead>
+			</table>
+
+			<div  style="width:100%;background-color:#FCF8E3;">
+				<table style="width:100%;">
+					<tr>
+						<td style="width:60%;">
+							<div id="main" style="height:250px;width:100%;"></div>
+						</td>
+						<td style="width:40%;">
+							<div style="width:50%; display: inline-block;">
+								<div>
+									<button type="button" class="btn btn-success btn-sm actionBtn" id="distributionRecruit">分销商招募</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-success btn-sm actionBtn" id="distributionManage">分销商管理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-success btn-sm actionBtn" id="distributionMan">业务员管理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-success btn-sm actionBtn" id="distributionDelivery">分销商交货</button>
+								</div>
+							</div>
+							<div style=" display: inline-block;">
+								<div >
+									<button type="button" class="btn btn-success btn-sm roleBtn " style="">分销经理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-success btn-sm">分销商订货</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-success btn-sm actionBtn" id="distributionTransport">产品运输申请</button>
+								</div>
+
+								<div>
+									<button type="button" class="btn btn-success btn-sm">产品调货管理</button>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="rotationT-90" style="width:50%;position:absolute;top:4%;right:0%; display: inline-block;z-index:100;">
+			<table class="table" style="border:none;margin:0px;">
+				<thead>
+					<tr class="danger">
+						<th colspan="2">M1市场</th>
+						<th colspan="2">M2市场</th>
+						<th colspan="2">M3市场</th>
+					</tr>
+					<tr class="warning">
+						<th rowspan="5">P1</th>
+						<td colspan="2">业务员：3</td>
+						<th rowspan="5">P2</th>
+						<td colspan="2">业务员：3</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">订单数：2</td>
+						<td colspan="2">订单数：2</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">未交单：5</td>
+						<td colspan="2">未交单：5</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">已交单：2</td>
+						<td colspan="2">已交单：2</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">违约单：2</td>
+						<td colspan="2">违约单：2</td>
+					</tr>
+					<tr class="warning">
+						<th rowspan="4">P1订单区域</th>
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+
+						</td>
+						<th rowspan="4">P2订单区域</th>
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+						</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+						</td>
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+						</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+						</td>
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+						</td>
+					</tr>
+					<tr class="warning">
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+						</td>
+						<td colspan="2">
+							订单编号：
+							<input type="text" style="width:50%;"/>
+						</td>
+					</tr>
+
+				</thead>
+			</table>
+			<div  style="width:100%;background-color:#FCF8E3;">
+				<table style="width:100%;">
+					<tr>
+						<td style="width:60%">
+							<div id="main2" style="height:250px;width:100%;"></div>
+						</td>
+						<td style="width:35%">
+							<div style="width:50%; display: inline-block;">
+								<div style="text-align:center;">
+									<button type="button" class="btn btn-info btn-sm roleBtn" style="">直销经理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-info btn-sm actionBtn" id="directPromotion">市场促销</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-info btn-sm actionBtn" id="directManager">直销部管理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-info btn-sm" >产品调货管理</button>
+								</div>
+							</div>
+							<div style=" display: inline-block;">
+								<div>
+									<button type="button" class="btn btn-info btn-sm" >直销竞标</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-info btn-sm actionBtn" id="directMan">业务员管理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-info btn-sm actionBtn" id="directTransport">产品运输申请</button>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+
+	</div>
+	<div style="width:80%;postion:relative;z-index:100;margin:auto;">
+		<div style="width:100%;margin:auto;">
+			<table style="width:100%;">
+				<tr>
+					<td width="50%" style="background-color:#F5F5DC;">
+						<table style="width:100%;">
+							<tr>
+								<td style="width:25%;text-align:center;" >
+									<div>
+										<button type="button" class="btn btn-warning btn-sm roleBtn" style="">产品总监</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-warning btn-sm actionBtn" id="production">产品生产</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-warning btn-sm actionBtn" id="productClearance">产品清仓</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-warning btn-sm actionBtn" id="productTransport">产品运输</button>
+									</div>
+									<div>
+										<button type="button" class="btn btn-warning btn-sm actionBtn" id="productTransferCargo">产品调货</button>
+									</div>
+								</td>
+								<td style="width:70%">
+									<div id="main3" style="height:250px;width:100%;"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<!-- <td width="10%" style="background:#BB5500;">
+					<div id="tagsList2" >
+						<a href="" title="分页插件">市场占有能力</a>
+						<a href="">市场创利能力</a>
+						<a href="">市场发展能力</a>
+						<a href="">产品生产</a>
+						<a href="">销售完成率</a>
+						<a href="">销售增长率</a>
+						<a href="">销售回款率</a>
+					</div>
+				</td>
+				-->
+				<td style="background-color:#F5F5DC;">
+					<table style="width:100%;">
+						<tr>
+							<td style="width:70%;">
+								<div id="main4" style="height:250px;width:100%;"></div>
+							</td>
+							<td style="width:25%;">
+								<div>
+									<button type="button" class="btn btn-danger btn-sm roleBtn" style="">客服经理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-danger btn-sm actionBtn" id="serviceManage">客服人员管理</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-danger btn-sm actionBtn" id="service">产品售后服务</button>
+								</div>
+								<div>
+									<button type="button" class="btn btn-danger btn-sm actionBtn" id="serviceReturn">产品退换货服务</button>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel"></h4>
+			</div>
+			<div class="modal-body" id="modalBody"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" 
+               data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary" id="modalBtn"></button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal -->
+</div>
+
+</body>
+</html>
